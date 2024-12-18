@@ -11,24 +11,26 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-NZGHQJ64');</script>
     <!-- End Google Tag Manager -->
-    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            background-color: #f9f9f9;
+            padding-left: 14.28%; /* Leave 1/7th screen on the sides */
+            padding-right: 14.28%;
         }
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
-            background-color: #fff;
-            border-bottom: 1px solid #ddd;
+            background-color: #444;
+            color: #fff;
         }
         header h2 {
             margin: 0;
@@ -36,7 +38,7 @@
         }
         header h2 a {
             text-decoration: none;
-            color: #333;
+            color: #fff;
         }
         nav ul {
             list-style: none;
@@ -46,7 +48,7 @@
         }
         nav ul li a {
             text-decoration: none;
-            color: #007BFF;
+            color: #fff;
             font-size: 1rem;
         }
         nav ul li a:hover {
@@ -56,37 +58,56 @@
             flex: 1;
             padding: 20px;
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+            flex-direction: column;
+            gap: 40px;
         }
         .card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            padding: 15px;
-            text-align: center;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            background-color: #e0e0e0;
         }
-        .card h3 {
-            margin-top: 0;
+        .card img {
+            width: 20%;
+            height: auto;
+            max-height: 50%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .card-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .card-content h3 {
+            margin: 0;
+            font-size: 1.5rem;
             color: #333;
         }
-        .card p {
+        .card-content p {
+            margin: 10px 0;
             color: #555;
-            font-size: 0.9rem;
+            font-size: 1rem;
+        }
+        .card-content a {
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        .card-content a:hover {
+            text-decoration: underline;
         }
         footer {
             text-align: center;
             padding: 10px 20px;
-            background-color: #fff;
-            border-top: 1px solid #ddd;
+            background-color: #444;
+            color: #fff;
         }
         footer p {
             margin: 5px 0;
             font-size: 0.9rem;
-            color: #555;
         }
     </style>
 </head>
@@ -110,20 +131,36 @@
 
     <main>
         <div class="card">
-            <h3>Sales Performance Dashboard</h3>
-            <p>A tool for tracking revenue and profits with Power BI. Enables deep insights through filters and drill-downs.</p>
+            <img src="project1.jpg" alt="Sales Performance Dashboard">
+            <div class="card-content">
+                <h3>Sales Performance Dashboard</h3>
+                <p>Designed an interactive dashboard with filters for tracking sales revenue and profit margins. This tool provided deep insights into regional and product-line sales trends.</p>
+                <a href="#">Read More</a>
+            </div>
         </div>
         <div class="card">
-            <h3>Housing Price Prediction Model</h3>
-            <p>A machine learning model to estimate housing prices, using regression techniques and data analysis.</p>
+            <img src="project2.jpg" alt="Housing Price Prediction Model">
+            <div class="card-content">
+                <h3>Housing Price Prediction Model</h3>
+                <p>Developed a machine learning model using Python to predict housing prices with high accuracy, enabling better decision-making for buyers and investors.</p>
+                <a href="#">Read More</a>
+            </div>
         </div>
         <div class="card">
-            <h3>Bubbl Social</h3>
-            <p>Co-founded a social media platform for students, incubated at DTU IIF with ₹50,000 funding.</p>
+            <img src="project3.jpg" alt="Bubbl Social">
+            <div class="card-content">
+                <h3>Bubbl Social</h3>
+                <p>Co-founded a social media platform for college students. Led product development and achieved over 50 downloads within the first few hours of launch.</p>
+                <a href="#">Read More</a>
+            </div>
         </div>
         <div class="card">
-            <h3>UBGA Store</h3>
-            <p>Established an online toy store with Facebook ad campaigns, achieving 9K INR in sales within the first month.</p>
+            <img src="project4.jpg" alt="UBGA Store">
+            <div class="card-content">
+                <h3>UBGA Store</h3>
+                <p>Established an online store specializing in toys. Conducted ad campaigns that resulted in significant sales within the first month.</p>
+                <a href="#">Read More</a>
+            </div>
         </div>
     </main>
 
