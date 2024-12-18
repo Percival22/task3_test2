@@ -21,29 +21,30 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            padding-left: 10%; /* More space on the sides */
+            padding-left: 10%;
             padding-right: 10%;
         }
         header {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
             padding: 10px 0;
-            background-color: #444;
-            color: #fff;
+            color: #333;
             width: 100%;
+            background-color: transparent;
         }
         header h2 {
             margin: 0;
-            font-size: 2rem;
+            font-size: 2.5rem;
         }
         header h2 a {
             text-decoration: none;
-            color: #fff;
+            color: #333;
         }
         nav ul {
             list-style: none;
             padding: 0;
+            margin-left: 20px;
             display: flex;
             gap: 15px;
         }
@@ -52,11 +53,11 @@
         }
         nav ul li:not(:last-child)::after {
             content: " | ";
-            color: #fff;
+            color: #333;
         }
         nav ul li a {
             text-decoration: none;
-            color: #fff;
+            color: #333;
         }
         nav ul li a:hover {
             text-decoration: underline;
@@ -69,9 +70,12 @@
             gap: 40px;
         }
         .page-title {
-            font-size: 3rem;
+            font-size: 4rem;
             margin-bottom: 30px;
             text-align: center;
+            padding: 20px;
+            background-color: #e0e0e0;
+            border-radius: 8px;
         }
         .card {
             display: flex;
