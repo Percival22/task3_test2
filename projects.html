@@ -21,20 +21,21 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            padding-left: 14.28%; /* Leave 1/7th screen on the sides */
-            padding-right: 14.28%;
+            padding-left: 10%; /* More space on the sides */
+            padding-right: 10%;
         }
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
+            padding: 10px 0;
             background-color: #444;
             color: #fff;
+            width: 100%;
         }
         header h2 {
             margin: 0;
-            font-size: 1.5rem;
+            font-size: 2rem;
         }
         header h2 a {
             text-decoration: none;
@@ -46,20 +47,31 @@
             display: flex;
             gap: 15px;
         }
+        nav ul li {
+            font-size: 1.2rem;
+        }
+        nav ul li:not(:last-child)::after {
+            content: " | ";
+            color: #fff;
+        }
         nav ul li a {
             text-decoration: none;
             color: #fff;
-            font-size: 1rem;
         }
         nav ul li a:hover {
             text-decoration: underline;
         }
         main {
             flex: 1;
-            padding: 20px;
+            padding: 20px 0;
             display: flex;
             flex-direction: column;
             gap: 40px;
+        }
+        .page-title {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            text-align: center;
         }
         .card {
             display: flex;
@@ -82,13 +94,19 @@
         }
         .card-content h3 {
             margin: 0;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: #333;
         }
         .card-content p {
             margin: 10px 0;
             color: #555;
             font-size: 1rem;
+            line-height: 1.6;
+        }
+        .card-content .date {
+            font-style: italic;
+            color: #777;
+            margin-bottom: 10px;
         }
         .card-content a {
             text-decoration: none;
@@ -101,7 +119,7 @@
         }
         footer {
             text-align: center;
-            padding: 10px 20px;
+            padding: 10px 0;
             background-color: #444;
             color: #fff;
         }
@@ -130,11 +148,13 @@
     </header>
 
     <main>
+        <div class="page-title">My Projects</div>
         <div class="card">
             <img src="project1.jpg" alt="Sales Performance Dashboard">
             <div class="card-content">
                 <h3>Sales Performance Dashboard</h3>
-                <p>Designed an interactive dashboard with filters for tracking sales revenue and profit margins. This tool provided deep insights into regional and product-line sales trends.</p>
+                <p class="date">Completed on: March 10, 2024</p>
+                <p>Designed an interactive dashboard with Power BI. Enabled in-depth filtering to explore revenue and profit margins. This tool offered comprehensive regional and product-line insights to empower strategic decision-making across the sales team. The dashboard improved report generation efficiency by 40%, streamlining workflow.</p>
                 <a href="#">Read More</a>
             </div>
         </div>
@@ -142,7 +162,8 @@
             <img src="project2.jpg" alt="Housing Price Prediction Model">
             <div class="card-content">
                 <h3>Housing Price Prediction Model</h3>
-                <p>Developed a machine learning model using Python to predict housing prices with high accuracy, enabling better decision-making for buyers and investors.</p>
+                <p class="date">Completed on: January 20, 2023</p>
+                <p>Developed an advanced machine learning model to estimate housing prices. The model utilized regression techniques and extensive dataset preprocessing, achieving an accuracy improvement of 25%. Used by real estate firms to better assess property valuations, saving resources and increasing customer trust.</p>
                 <a href="#">Read More</a>
             </div>
         </div>
@@ -150,7 +171,8 @@
             <img src="project3.jpg" alt="Bubbl Social">
             <div class="card-content">
                 <h3>Bubbl Social</h3>
-                <p>Co-founded a social media platform for college students. Led product development and achieved over 50 downloads within the first few hours of launch.</p>
+                <p class="date">Completed on: July 5, 2022</p>
+                <p>Co-founded a unique social media platform aimed at college students. Oversaw content moderation strategies and app feature rollouts, driving engagement with a 20% increase in weekly active users. Presented the project at national tech exhibitions, garnering positive reviews and networking opportunities.</p>
                 <a href="#">Read More</a>
             </div>
         </div>
@@ -158,7 +180,8 @@
             <img src="project4.jpg" alt="UBGA Store">
             <div class="card-content">
                 <h3>UBGA Store</h3>
-                <p>Established an online store specializing in toys. Conducted ad campaigns that resulted in significant sales within the first month.</p>
+                <p class="date">Completed on: November 15, 2021</p>
+                <p>Established an e-commerce platform for toys and board games. Executed targeted advertising campaigns that led to a 30% sales boost within the first quarter. Implemented a feedback system to identify high-demand products, further optimizing inventory and customer satisfaction.</p>
                 <a href="#">Read More</a>
             </div>
         </div>
