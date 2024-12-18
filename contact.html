@@ -9,7 +9,7 @@
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PPTLMSRG');</script>
+    })(window,document,'script','dataLayer','GTM-NZGHQJ64');</script>
     <!-- End Google Tag Manager -->
     <style>
         body {
@@ -123,10 +123,16 @@
             font-size: 0.9rem;
         }
     </style>
+    <script>
+        function redirectToThankYou(event) {
+            event.preventDefault(); // Prevent form submission
+            window.location.href = 'thank_you.html';
+        }
+    </script>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPTLMSRG"
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZGHQJ64"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
@@ -144,7 +150,7 @@
 
     <main>
         <div class="page-title">Contact Me</div>
-        <form class="contact-form" action="submit_contact.php" method="POST">
+        <form class="contact-form" onsubmit="redirectToThankYou(event)">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
