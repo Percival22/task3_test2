@@ -11,85 +11,115 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-NZGHQJ64');</script>
     <!-- End Google Tag Manager -->
-    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #f7f7f7;
             color: #333;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            padding-left: 10%;
+            padding-right: 10%;
         }
         header {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: #fff;
+            padding: 10px 0;
+            color: #333;
+            width: 100%;
+            background-color: transparent;
         }
         header h2 {
             margin: 0;
-            font-size: 1.5rem;
+            font-size: 2.5rem;
         }
         header h2 a {
             text-decoration: none;
-            color: #fff;
+            color: #333;
         }
         nav ul {
             list-style: none;
             padding: 0;
+            margin-left: 20px;
             display: flex;
             gap: 15px;
         }
+        nav ul li {
+            font-size: 1.2rem;
+        }
+        nav ul li:not(:last-child)::after {
+            content: " | ";
+            color: #333;
+        }
         nav ul li a {
             text-decoration: none;
-            color: #fff;
-            font-size: 1rem;
+            color: #333;
         }
         nav ul li a:hover {
             text-decoration: underline;
         }
         main {
             flex: 1;
-            padding: 20px;
+            padding: 20px 0;
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            align-items: center;
+            gap: 40px;
+        }
+        .page-title {
+            font-size: 4rem;
+            margin-bottom: 30px;
+            text-align: center;
+            padding: 20px;
+            background-color: #e0e0e0;
+            border-radius: 8px;
         }
         .card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 90%;
-            max-width: 600px;
-            padding: 15px;
-            text-align: center;
-            overflow: hidden;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            background-color: #e0e0e0;
         }
         .card img {
-            max-width: 100%;
-            height: 200px;
-            object-fit: cover;
+            width: 20%;
+            height: auto;
+            max-height: 50%;
             border-radius: 8px;
+            object-fit: cover;
         }
-        .card h3 {
-            margin-top: 15px;
-            color: #007BFF;
+        .card-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
-        .card p {
+        .card-content h3 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: #333;
+        }
+        .card-content p {
+            margin: 10px 0;
             color: #555;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        .card-content a {
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        .card-content a:hover {
+            text-decoration: underline;
         }
         footer {
             text-align: center;
-            padding: 10px 20px;
-            background-color: #007BFF;
+            padding: 10px 0;
+            background-color: #444;
             color: #fff;
         }
         footer p {
@@ -117,30 +147,38 @@
     </header>
 
     <main>
+        <div class="page-title">My Lifestyle</div>
         <div class="card">
-            <img src="latin_dancing.jpg" alt="Latin Dancing">
-            <h3>Latin Dancing</h3>
-            <p>Intermediate level in Bachata and Kizomba. Dancing has been a passion, giving me an outlet for creativity and fitness.</p>
+            <img src="dancing.jpg" alt="Latin Dancing">
+            <div class="card-content">
+                <h3>Latin Dancing</h3>
+                <p>Intermediate level in Bachata and Kizomba. Dancing has been a passion, giving me an outlet for creativity and fitness. Participated in various college and community events.</p>
+                <a href="#">Read More</a>
+            </div>
         </div>
         <div class="card">
             <img src="basketball.jpg" alt="Basketball">
-            <h3>Basketball</h3>
-            <p>Gold medalist at DTU Arena; Silver medalist in high school Zonals. Basketball has taught me teamwork and perseverance.</p>
+            <div class="card-content">
+                <h3>Basketball</h3>
+                <p>Gold medalist at DTU Arena; Silver medalist in high school Zonals. Basketball has taught me teamwork, strategy, and resilience under pressure.</p>
+                <a href="#">Read More</a>
+            </div>
         </div>
         <div class="card">
             <img src="skating.jpg" alt="Skating">
-            <h3>Skating</h3>
-            <p>Qualified for nationals; earned over 30 Gold Medals. Skating has been a thrilling journey of discipline and skill.</p>
+            <div class="card-content">
+                <h3>Skating</h3>
+                <p>Qualified for nationals; earned over 30 Gold Medals. Skating has been a thrilling journey of discipline and skill development.</p>
+                <a href="#">Read More</a>
+            </div>
         </div>
         <div class="card">
             <img src="golf.jpg" alt="Golf">
-            <h3>Golf</h3>
-            <p>Bronze plate winner at the Junior Qutub Golf Arena. Golf has enhanced my focus and patience.</p>
-        </div>
-        <div class="card">
-            <img src="squash_riding.jpg" alt="Squash and Horse Riding">
-            <h3>Squash and Horse Riding</h3>
-            <p>Competent level in both sports, which have expanded my range of physical and mental skills.</p>
+            <div class="card-content">
+                <h3>Golf</h3>
+                <p>Bronze plate winner at the Junior Qutub Golf Arena. Golf has helped me develop focus, patience, and a deep appreciation for precision.</p>
+                <a href="#">Read More</a>
+            </div>
         </div>
     </main>
 
