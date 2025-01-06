@@ -24,7 +24,7 @@
             margin-bottom: 1rem;
             color: #333;
         }
-        .install-button {
+        .download-button {
             display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
@@ -36,7 +36,7 @@
             text-decoration: none;
             cursor: pointer;
         }
-        .install-button:hover {
+        .download-button:hover {
             background-color: #0056b3;
         }
     </style>
@@ -44,8 +44,7 @@
 <body>
     <header>
         <h1>Parshv Jain</h1>
-        <!-- Install Button -->
-        <button id="installButton" class="install-button">Download CV</button>
+        <button id="downloadButton" class="download-button">Download CV</button>
     </header>
 
     <footer>
@@ -53,49 +52,17 @@
     </footer>
 
     <script>
-        // Function to get the clickid from the query parameter
-        function getClickId() {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get('clickid'); // Extract 'clickid' from the URL
-        }
+        // Direct download link for the CV file
+        const downloadLink = 'https://docs.google.com/uc?export=download&id=17XnQhX3GetxCP6ead8RpZ71NntSViIBt';
 
-        // Function to send the postback
-        function sendPostback(clickid) {
-            if (clickid) {
-                const postbackUrl = `https://track.sapp.digital/postback?clickid=${clickid}&goal=1`;
-                
-                // Send the postback request
-                fetch(postbackUrl)
-                    .then(response => {
-                        if (response.ok) {
-                            console.log("Postback sent successfully!");
-                        } else {
-                            console.error("Failed to send postback:", response.status);
-                        }
-                    })
-                    .catch(error => {
-                        console.error("Error sending postback:", error);
-                    });
-            } else {
-                console.error("No clickid found in the URL. Postback cannot be sent.");
-            }
-        }
-
-        // Function to download the CV
-        function downloadCV() {
+        // Event listener for the download button
+        document.getElementById('downloadButton').addEventListener('click', () => {
             const link = document.createElement('a');
-            link.href = 'cv.docx'; // Replace with the actual path to your CV file
-            link.download = 'Parshv_Jain_CV.docx';
+            link.href = downloadLink;
+            link.download = 'Parshv_Jain_CV.docx'; // Suggested filename for the download
             link.click();
-        }
-
-        // Event listener for the button
-        const installButton = document.getElementById('installButton');
-        installButton.addEventListener('click', () => {
-            const clickid = getClickId(); // Get the clickid from the URL
-            sendPostback(clickid);       // Send the postback
-            downloadCV();                // Trigger the CV download
         });
     </script>
 </body>
 </html>
+
